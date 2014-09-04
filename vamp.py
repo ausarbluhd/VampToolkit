@@ -1,7 +1,19 @@
 #!/usr/bin/env python
-### IMPORTS
-from subprocess import call
+
+
+
+################# 
+#IMPORTS
+#################
+
 import os
+
+
+
+#################
+#MAIN SCREEN
+################
+
 
 print("""
 
@@ -55,7 +67,7 @@ print("""
                      #       ,   `  # '    #   :;             +.   ;    ,'  ;    #      '   ,       
                      ,       +   ;  + +    #     @          `#     ,   ..   #    ;      @   '       
                     ;        #   #  + #    @      ',       +,      .   ;`   @     `     +   @       
-                    @     [Vamp Toolkyt]   #       `#    .#        .   #  [Ausar BLuhd]  +  ;    
+                    @     [Vamp Toolkit]   #       `#    .#        .   #  [Ausar Bluhd]  +  ;    
                     ,       `    ;  ; #    +         +, #.         `   @    '     @      ,  ,`      
                    ;        +   .`  ; #   ,@          `'          ``   ;    ,     :      #   ,      
                    #        @   '   ' #  ;.'                      `+. `.    ``    `.     @   +      
@@ -64,37 +76,78 @@ print("""
                   #        #   `.   @ #`   '         '@`@+,@`     #@   #     #     .`     ;  `      
                  .`        +   ;    ''     ,         +`@@#,,#     @+    #    @      +     @   ;     
                  @        `.   #    :.     .        #;@ #.`@+'    @;    `;   ;      #     +   # """)
-print("""
-          [0. Exit] [1. Moniter Mode] [2. Tx Power] [3. Wireless Scanning] [4. Cracking Handshakes]""")
 
 
-number = raw_input("what is your number? =///> ")
-def menu(UserSupplyedNumber):
-  if UserSupplyedNumber=="1":
-    #file1 = os.open("ifconfgi.txt","w")
+
+
+##################
+#FUNCTIONS
+##################
+def menu():
+  print("""
+                   [0. Exit] [1. Choose Interface] [2. ] [3. ] [4. Randomize Wordlist]
+                   """)
+  
+  input = raw_input("what is your number? =///> ")
+  selection(input)
+
+
+def selection(input):
+  if input=="1":
+    
+
+
+
+
+
+
+
     print ("""
                                  What Network Card Do you want to use
-      """)
-    #vamp = os.open("vamp.txt)
-    print("vamp")
-    #call(["ifconfig", "-a","ifconfig.txt"])
+                                     """)
+    vamp = open("vamp.txt", "w")
+    print(vamp)
+    #ifconfig = 1
+    interface = os.execvp("ifconfig", ["ifconfig", "-a"])
     #Sprint(file1)
-    #file1 = open("ifconfig.txt","w")
+    #vamp.write(os.system(ifconfig)
+    #print vamp
+    menu()
+  
 
-  elif UserSupplyedNumber=="2":
-    print ("txt power")
+
+
+
+
+
+
+
+
+
+  elif input=="2":
+    print ("Option 2")
     #file1 = open("ifconfig.txt","w")
-  elif UserSupplyedNumber==3:
-    Print()
-  elif UserSupplyedNumber==4:
-    Print()
-  elif UserSupplyedNumber==5:
-    Print()
-  elif UserSupplyedNumber==6:
-    Print()
-  elif UserSupplyedNumber==7:
-    Print()
-  else :
-    UserSupplyedNumber>0;
-    print ("the number is greater then 9")
-menu(number)
+    menu()
+  elif input=="3":
+    print("Num3")
+    menu()
+  elif input=="4":
+    print("s")
+    menu()
+  elif input=="5":
+    print("sd")
+    menu()
+  elif input=="6":
+    print("sdgf")
+    menu()
+  elif input=="7":
+    print("sdfg")
+    menu()
+  else:
+    print ("Quitting")
+
+###################
+#Calls
+###################
+
+menu()
