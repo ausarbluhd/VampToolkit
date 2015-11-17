@@ -7,6 +7,7 @@
 #################
 
 import os
+import shutil
 
 
 
@@ -78,69 +79,45 @@ print("""
                  @        `.   #    :.     .        #;@ #.`@+'    @;    `;   ;      #     +   # """)
 
 
-
-
+##################
+# DEFINITIONS
+###################
+def workstation():
+ #shutil.copy2('lilo.automode_workstation', 'cool')
+  copyfile(lilo.automode_workstation, dst)
+  menu()
 ##################
 #FUNCTIONS
 ##################
 def menu():
   print("""
-                   [0. Exit] [1. Choose Interface] [2. ] [3. ] [4. Randomize Wordlist]
+                   [1. Deploy Workstation] [2. Deploy Server] [3. Deploy Router ] 
+
+                    [4. Deploy Auditing Machine]
                    """)
-  
-  input = raw_input("what is your number? =///> ")
-  selection(input)
-
-
-def selection(input):
-  if input=="1":
-    
-
-
-
-
-
-
-
-    print ("""
-                                 What Network Card Do you want to use
-                                     """)
-    vamp = open("vamp.txt", "w")
-    print(vamp)
-    #ifconfig = 1
-    interface = os.execvp("ifconfig", ["ifconfig", "-a"])
-    #Sprint(file1)
-    #vamp.write(os.system(ifconfig)
-    #print vamp
-    menu()
-  
-
-
-
-
-
-
-
-
-
-
-  elif input=="2":
+  cec = raw_input("What are we Deploying? =///> ")
+  selection("cec")
+def selection(choolie):
+  if choolie=="1":
+      workstation()
+      menu()
+  elif choolie=="2":
     print ("Option 2")
     #file1 = open("ifconfig.txt","w")
     menu()
-  elif input=="3":
+  elif choolie=="3":
     print("Num3")
     menu()
-  elif input=="4":
+  elif choolie=="4":
     print("s")
     menu()
-  elif input=="5":
+  elif choolie=="5":
     print("sd")
     menu()
-  elif input=="6":
+  elif choolie=="6":
     print("sdgf")
     menu()
-  elif input=="7":
+  elif choolie=="7":
     print("sdfg")
     menu()
   else:
@@ -149,5 +126,6 @@ def selection(input):
 ###################
 #Calls
 ###################
+
 
 menu()
